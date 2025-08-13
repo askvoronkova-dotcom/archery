@@ -82,8 +82,7 @@ public class PlayerDataManager : MonoBehaviour
         if (PlayerPrefs.HasKey("PlayerSkin3"))
             playerSkin3 = PlayerPrefs.GetInt("PlayerSkin3");
 
-        if (PlayerPrefs.HasKey("PlayerSkin4"))
-            playerSkin4 = PlayerPrefs.GetInt("PlayerSkin14");
+      
     }
 
     public void ClearPlayerData()
