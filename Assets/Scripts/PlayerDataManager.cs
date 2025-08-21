@@ -14,6 +14,7 @@ public class PlayerDataManager : MonoBehaviour
     public int playerSkin2;
     public int playerSkin3;
 
+    public int selectedSkin;
 
     public void SavePlayerLevel()
     {
@@ -45,6 +46,8 @@ public class PlayerDataManager : MonoBehaviour
         PlayerPrefs.SetInt("PlayerSkin1", playerSkin1);
         PlayerPrefs.Save();
     }
+
+
     public void SavePlayerSkin2()
     {
         PlayerPrefs.SetInt("PlayerSkin2", playerSkin2);
@@ -53,6 +56,27 @@ public class PlayerDataManager : MonoBehaviour
     public void SavePlayerSkin3()
     {
         PlayerPrefs.SetInt("PlayerSkin3", playerSkin3);
+        PlayerPrefs.Save();
+    }
+
+    public void SaveAll()
+    {
+        PlayerPrefs.SetInt("PlayerLevel", playerLevel);
+
+        PlayerPrefs.SetInt("PlayerDamage", playerDamage);
+
+        PlayerPrefs.SetInt("PlayerHp", playerHp);
+
+        PlayerPrefs.SetInt("PlayerArmor", playerArmor);
+
+        PlayerPrefs.SetInt("PlayerCoins", playerCoins);
+
+        PlayerPrefs.SetInt("PlayerSkin1", playerSkin1);
+
+        PlayerPrefs.SetInt("PlayerSkin2", playerSkin2);
+
+        PlayerPrefs.SetInt("PlayerSkin3", playerSkin3);
+
         PlayerPrefs.Save();
     }
   
@@ -81,8 +105,6 @@ public class PlayerDataManager : MonoBehaviour
 
         if (PlayerPrefs.HasKey("PlayerSkin3"))
             playerSkin3 = PlayerPrefs.GetInt("PlayerSkin3");
-
-      
     }
 
     public void ClearPlayerData()
